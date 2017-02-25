@@ -1,0 +1,33 @@
+.storeDetail
+  md-toolbar.md-hue-1
+    .md-toolbar-tools
+      h1.md-headline(flex)
+        i.fa.fa-shopping-cart(aria-hidden='true')
+        | {{$ctrl.storedata.name}}
+      md-button.md-icon-button(
+        ui-sref='storeEdit({storeId: $ctrl.storedata.id})'
+        aria-label="{{ 'STOREDETAIL.EDIT' | translate }}"
+        )
+        md-tooltip(md-direction='left')
+          span(translate='STOREDETAIL.EDIT')
+        i.fa.fa-pencil
+  store-detail-map(
+    ng-if='$ctrl.storedata.address',
+    store-data='$ctrl.storedata'
+  )
+  div(layout-padding)
+    p(ng-if='$ctrl.storedata.address')
+      md-tooltip
+        span(translate='STOREDETAIL.ADDRESS')
+      i.fa.fa-map-marker
+      | {{$ctrl.storedata.address}}
+    div
+      expandable-panel(
+        content='$ctrl.storedata.description'
+        markdown='true'
+        collapse='10'
+      )
+    pickup-list(
+      store-id='$ctrl.storedata.id'
+      options='$ctrl.pickupListOptions'
+    )

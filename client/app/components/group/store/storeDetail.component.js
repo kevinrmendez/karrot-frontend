@@ -1,4 +1,4 @@
-import template from "./storeDetail.html";
+import templateFn from "./storeDetail.pug";
 import controller from "./storeDetail.controller";
 import "./storeDetail.styl";
 
@@ -7,7 +7,7 @@ let storeDetailComponent = {
     storedata: "<"
   },
   restrict: "",
-  template,
+  template: templateFn(),
   controller
 };
 
