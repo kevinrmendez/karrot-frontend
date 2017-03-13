@@ -18,7 +18,7 @@ class TopbarController {
     });
   }
   isVerified() {
-    if (this.Authentication) {
+    if (this.Authentication.data) {
       return this.Authentication.data.mail_verified;
     }
     return false;
