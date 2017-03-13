@@ -188,6 +188,7 @@
   },
   "NOTIFICATIONS": {
     "TITLE": "Notifications",
+    "NEW_TITLE": "New Notification",
     "NOT_VERIFIED": "Not verified",
     "RESEND_VERIFICATION": "Resend verification",
     "VERIFICATION_EMAIL_SENT": "We sent you another verification mail. Please check your inbox."
